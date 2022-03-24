@@ -1,0 +1,19 @@
+for i in range(int(input())):  #количество циклов  
+    n = input().split()  #длина и  количество данных 
+    d = []
+    c = 1
+    for j in range(int(n[0])): #данные
+        d.append(input())
+    for y in range(int(n[1])):
+        m = 0
+        for e in d: #пробек по списку
+            if e[y] == "1":
+                m += 1
+        if m % 2 != 0: #если количесво элеметов нечётное следовательно невозможно
+            print("NO")
+            c = 0
+            break
+    if c == 1:
+        print("YES")
+
+#время работы 0:00:00.000081

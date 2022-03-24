@@ -1,0 +1,15 @@
+a = input().split() #длина и количесвто данных
+d = []
+sum = 0
+for i in range(int(a[1])): #заполнение данных
+    d.append(input().split())
+for i in range(int(a[0])):
+    c = 0
+    for j in d: 
+        if i + 1 <= int(j[1]) and i + 1 >= int(j[0]): #проверка подходит ли дата
+            if int(j[2]) > c: #проверка у кого выше цена
+                c = int(j[2])
+    sum += c
+print(sum)
+
+#время работы:0:00:00.000110

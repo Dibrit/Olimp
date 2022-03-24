@@ -1,0 +1,26 @@
+n = int(input())
+answer = []
+result = []
+for i in range(n):
+    quantity = int(input())
+    nums = [int(i) for i in input().split()]
+    item = []
+    for idx, j in enumerate(nums):
+        if len(item) == 0:
+            item.append(j)
+        elif min(item) >= len(item) + 1:
+            item.append(j)
+        else:
+            answer.append(item)
+            result.append(str(len(item)))
+            item = []
+            item.append(j)
+        if idx == len(nums) - 1:
+            answer.append(item)
+            result.append(str(len(item)))
+    print(len(answer))
+    print(" ".join(result))
+    result = []
+    answer = []
+
+время работы: 0:00:00.000098
